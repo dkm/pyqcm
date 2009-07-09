@@ -1,5 +1,5 @@
 Source: pyqcm
-Section: library
+Section: libs
 Priority: extra
 Maintainer: Marc Poulhiès <dkm@kataplop.net>
 Build-Depends: cdbs, debhelper (>= 7), python-support, python-all-dev
@@ -15,7 +15,7 @@ Description: python module to handle QCM
 
 Package: pyqcm-ffvl-2004
 Architecture: all
-Section: library
+Section: libs
 Depends: python-pyqcm
 Description: data for FFVL 2004 for pyqcm
  data for FFVL 2004 for pyqcm
