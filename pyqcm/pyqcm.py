@@ -96,10 +96,10 @@ class XmlQCM:
             seqbrev = ["@type='%s'" %c for c in brevets]
             temp = root.xpath("//chapter[%s]/brevet[%s]/question" %(" or ".join(seqchap),
                                                                     " or ".join(seqbrev)))
-        elif chapters != None and brevets == None :
+        elif chapters == None and brevets != None :
             seqbrev = ["@type='%s'" %c for c in brevets]
             temp = root.xpath("//brevet[%s]/question" %" or ".join(seqbrev))
-        elif chapters == None and brevets != None:
+        elif chapters != None and brevets == None:
             seq = ["@id='%s'" %c for c in chapters]
             temp = root.xpath("//chapter[%s]//question" %" or ".join(seq))
         elif chapters == None and brevets == None:
