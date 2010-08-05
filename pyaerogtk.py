@@ -12,7 +12,7 @@
 ## GNU General Public License for more details.
 
 
-from pyqcm import XmlQCM
+from pyqcm.pyqcm import XmlQCM
 import pygtk
 pygtk.require ('2.0')
 import gtk.glade
@@ -64,7 +64,7 @@ class PyAeroStartupGUI (PyAeroGUI):
         for name,btn in self.c_buttons.items():
             if btn.get_active():
                 chapters += [name]
-                
+
         main_gui = PyAeroMainGUI(self.qcm, length, chapters=chapters)
 
 class PyAeroMainGUI (PyAeroGUI):
@@ -111,7 +111,7 @@ class PyAeroMainGUI (PyAeroGUI):
             self.chkbox[name] = self.xml.get_widget("chkbtn_%s" %name)
 
         if self.playing:
-            self.qcm.select(number=length, chapter=chapters)
+            self.qcm.select(number=length, chapters=chapters)
             self.length = self.qcm.length
             if start:
                 self.display_next_question()
